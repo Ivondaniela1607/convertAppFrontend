@@ -18,19 +18,19 @@ function App() {
 
   const fileSelectedHandle = (e) => {
     disable = true;
+    console.log("disable", disable)
     setFile({
       file: e.target.files[0],
       fileName: e.target.files[0].name
     })
   
-    
   }
 
   const onSubmit = (e) => {
     e.preventDefault();
     const fd = new FormData();
     fd.append('file', file.file, file.fileName);
-    axios.post('..../api/upload', fd, {
+    axios.post('http://localhost:3000/sql/', fd, {
       onUploadProgress: progressEvent => {
         console.log('Upload progress' + Math.round(progressEvent.loaded / progressEvent.total * 100) + '%')
       }
@@ -51,6 +51,7 @@ function App() {
             id='file-input' 
             type="file" 
             onChange={fileSelectedHandle}
+            accept=".sql"
           />
           <label htmlFor="file-input">
          {/*    <Tooltip title="Adjuntar un archivo">

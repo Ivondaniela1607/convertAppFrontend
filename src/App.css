@@ -13,7 +13,20 @@ a {
   font-weight: 600;
   cursor: pointer;
   margin-left: 20px;
+  font-size: 13px;
 }
+
+::-webkit-file-upload-button {
+  background: #ffb858;
+  text-decoration: none;
+  color: #f8f9fa;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
 
 
 h1 {
@@ -22,11 +35,6 @@ h1 {
   color: #2e454c;
 }
 
-a:hover {
-  background-color: #ffb858;
-  transition: .5s;
-  color: #2e454c;
-}
 
 .hero {
   height: 100vh;
