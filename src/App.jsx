@@ -40,7 +40,7 @@ function App() {
   <div className="hero">
     <div className='containerHero'>
       <div className='containerImgHero'>
-        <img src="../src/assets/animation_640_l7wjj8sa.gif" alt="pruebita" />
+        <img src="src/assets/animation_640_l7wjj8sa.gif" alt="pruebita" />
       </div>
       <div className='containerDetail'>
         <h1>Convert Apping</h1>
