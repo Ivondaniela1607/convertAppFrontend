@@ -23,7 +23,6 @@ function App() {
       file: e.target.files[0],
       fileName: e.target.files[0].name
     })
-  
   }
 
   const onSubmit = (e) => {
@@ -40,28 +39,24 @@ function App() {
   <div className="hero">
     <div className='containerHero'>
       <div className='containerImgHero'>
-        <img src="src/assets/animation_640_l7wjj8sa.gif" alt="pruebita" />
+        <img src="src/assets/animation_640_l7wjj8sa.gif" alt="animation transfer" />
       </div>
       <div className='containerDetail'>
-        <h1>Convert Apping</h1>
-        <p>Convertidor automatizado para scripts de mySql a MongoDB. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, explicabo.</p>
+        <h1>Migración App</h1>
+        <p> Migración de un modelo de datos de MySQl a MongoDB a través de
+            la extracción de información en tuplas en archivos JSON a archivos
+            BSON
+        </p>
         <div className='containerButtons'>
-          {/* <a href="">Subir Archivo</a> */}
           <input 
             id='file-input' 
             type="file" 
             onChange={fileSelectedHandle}
             accept=".sql"
           />
-          <label htmlFor="file-input">
-         {/*    <Tooltip title="Adjuntar un archivo">
-              <IconButton  color='primary' component="span">
-                
-              </IconButton>
-            </Tooltip> */}
-          </label>
-            {disable &&
-              (<a
+          {
+            disable && (
+              <a
                 variant='contained'
                 onClick={onSubmit}
               >Aceptar
@@ -70,70 +65,7 @@ function App() {
         </div>
       </div>
     </div>
-  </div>
-  ) 
-
-/* state = {
-  select: null
-} */
-/*   state = {
-    selectedFile: null
-  }; */
-  
-   /*onFileChange = event => {
-    this.setState({ selectedFile: event.target.files[0] });
-  };
-
-  onFileUpload = () => {
-    const formData = new FormData();
-    formData.append(
-      "myFile",
-      this.state.selectedFile,
-      this.state.selectedFile.name
-    );
-    console.log(this.state.selectedFile);
-    axios.post("api/uploadfile", formData);
-  };
-
-  fileData = () => {
-    if (this.state.selectedFile) {
-      return (
-        <div>
-          <h2>File Details:</h2>
-          <p>File Name: {this.state.selectedFile.name}</p>   
-          <p>File Type: {this.state.selectedFile.type}</p>       
-          <p>
-              Last Modified:{" "}
-              {this.state.selectedFile.lastModifiedDate.toDateString()}
-          </p>
-        </div>
-        );
-    } else {
-      return (
-        <div>
-          <br />
-          <h4>Choose before Pressing the Upload button</h4>
-        </div>
-      );
-    }
-  };
-  return (
-    <div>
-      <h1>
-        GeeksforGeeks
-      </h1>
-      <h3>
-        File Upload using React!
-      </h3>
-      <div>
-        <input type="file" onChange={this.onFileChange} />
-        <button onClick={this.onFileUpload}>
-          Upload!
-        </button>
-      </div>
-        {this.fileData()}
-    </div>
-  ); */
+  </div>) 
 }
 
 export default App
